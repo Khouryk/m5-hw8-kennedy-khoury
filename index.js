@@ -1,5 +1,7 @@
 // Create an Array of at least 3 losing messages
 
+var lostMsg = [ 'Oh no!', ' Better luck next time!', 'Try again!']
+
 // Create variables to count wins and losses
 
 // Create variables that target elements with the following IDs: 'message', 'wins', 'losses'
@@ -9,9 +11,9 @@ var lose = document.querySelector ('.losses');
 
 // target all .box elements and attach a click event listener to each one using a loop
 var boxs = document.querySelector ('.boxes');
-boxs.forEach(function(button)) {
+boxs.forEach(function(button) {
     button.onclick = 
-}
+})
 // within each click event...
 // determine which box was clicked with 'this.textContent' or event.target.textContent
 // convert that value to a Number and store it to a variable
