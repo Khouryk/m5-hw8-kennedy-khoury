@@ -1,22 +1,30 @@
 // Create an Array of at least 3 losing messages
 
-var lostMsg = [ 'Oh no!', ' Better luck next time!', 'Try again!']
+var lostMsg = [ 'Oh no!', ' Better luck next time!', 'Try again!'];
 
 // Create variables to count wins and losses
 
 // Create variables that target elements with the following IDs: 'message', 'wins', 'losses'
-var msg = document.querySelector('.message');
-var wins = document.querySelector('.wins');
-var lose = document.querySelector ('.losses');
+var msg = document.getElementById('.message');
+var wins = document.getElementById('.wins');
+var lose = document.getElementById('.losses');
+
+console.log(msg);
 
 // target all .box elements and attach a click event listener to each one using a loop
-var boxs = document.querySelector ('.boxes');
-boxs.forEach(function(button) {
-    button.onclick = 
+document.querySeledtorAll('.boxes').forEach(item => {
+    item.addEventListener('click', event =>{
+
+    })
 })
+
 // within each click event...
 // determine which box was clicked with 'this.textContent' or event.target.textContent
 // convert that value to a Number and store it to a variable
+
+//boxs.addEventListener("click", function() {
+  //  alert(this.textContent + ' was clicked')
+ // });
 
 // create a random number between 1-3 and store it to a variable
 // This number will represent the winning box
