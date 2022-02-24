@@ -54,3 +54,10 @@ header{
 #box-3{
   background-color: #A5FF01;
 }
+
+
+.score{
+  color: #6003C3;
+  font-size: 2rem;
+  text-align: center;
+}

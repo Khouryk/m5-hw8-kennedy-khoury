@@ -4,24 +4,34 @@ var lostMsg = [ 'Oh no!', ' Better luck next time!', 'Try again!'];
 
 // Create variables to count wins and losses
 
+var winsCt= 0;
+var lossCt= 0;
+
 // Create variables that target elements with the following IDs: 'message', 'wins', 'losses'
-var msg = document.getElementById('.message');
-var wins = document.getElementById('.wins');
-var lose = document.getElementById('.losses');
+var msg = document.getElementById('#message');
+var wins = document.getElementById('#wins');
+var lose = document.getElementById('#losses');
 
 console.log(msg);
-
 // target all .box elements and attach a click event listener to each one using a loop
-document.querySeledtorAll('.boxes').forEach(item => {
-    item.addEventListener('click', event =>{
+let boxs = document.querySelectorAll('.box');
 
-    })
-})
+boxs.forEach(function (i){
+  i.addEventListener('click', function() {
+    console.log(i);
+  });
+
+});
 
 // within each click event...
 // determine which box was clicked with 'this.textContent' or event.target.textContent
 // convert that value to a Number and store it to a variable
 
+boxs = document.querySelector('#box-1');
+console.log(boxNum.textContent);
+
+const el = document.querySelector('#container');
+el.textContent = 'Just simple text';
 //boxs.addEventListener("click", function() {
   //  alert(this.textContent + ' was clicked')
  // });
