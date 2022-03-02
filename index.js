@@ -14,14 +14,18 @@ var lose = document.getElementById('#losses');
 
 console.log(msg);
 // target all .box elements and attach a click event listener to each one using a loop
+
+
 let boxs = document.querySelectorAll('.box');
 
 boxs.forEach(function (i){
   i.addEventListener('click', function() {
-    console.log(i);
-  });
+  console.log(i);
+ });
 
 });
+
+
 
 // within each click event...
 // determine which box was clicked with 'this.textContent' or event.target.textContent
