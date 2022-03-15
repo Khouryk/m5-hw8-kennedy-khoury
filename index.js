@@ -57,7 +57,7 @@ function getRandomNumber(){
 }
 var ranNum = getRandomNumber();
 
-
+// TESTING HANDLECLICK to help target clicked boxes??//
 function handleClick() {
    if (randomNumber === box1.valueOf){
       console.log('congrats');
@@ -76,10 +76,12 @@ function handleClick() {
 // if the numbers match, display a winning message by changing the text content of the div#message element
 // if the numbers match, increment wins and display the win count in div#wins
 
+
 //if ( i== randomNumber)
  //  console.log('You did it!');
 ////   else console.log(lostMsg);
 ;
+
 
 // if the numbers don't match, change the div#message element's text to a random losing message from the array above
 // if the numbers don't match, increment losses and display the loss count in div#losses
