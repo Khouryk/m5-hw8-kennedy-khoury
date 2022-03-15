@@ -7,13 +7,15 @@ var ranLoss= lostMsg[Math.floor(Math.random()*lostMsg.length)];
 
 // Create variables to count wins and losses
 
-var winsCt= 0;
-var lossCt= 0;
+var winsCt=  0;
+var lossCt=  0;
 
 // Create variables that target elements with the following IDs: 'message', 'wins', 'losses'
 var msg = document.getElementById('message').innerHTML;
-var wins = document.getElementById('wins');
-var lose = document.getElementById('losses');
+var wins = document.getElementById('wins').innerHTML;
+
+var lose = document.getElementById('losses').innerHTML;
+
 
 
 // target all .box elements and attach a click event listener to each one using a loop
@@ -61,20 +63,22 @@ var boxClick= parseInt(boxs.forEach(function(i){
 // if the numbers match, increment wins and display the win count in div#wins
 
 
-//if ( i== randomNumber)
- //  console.log('You did it!');
-////   else console.log(lostMsg);
-;
-
-
 var randomNumber = Math.floor(Math.random()*3)+1;
   console.log(randomNumber);
 
 //problem: runs as soon as page opens rather tahn after click, doesn't seem to be reading code, immediatly says failure msg
+
+
 if (boxClick ==randomNumber){
-   console.log('congrats');
-}
+   winsCt++;
+   document.getElementById('wins').innerHTML= 'Wins:' + winsCt;
+   document.getElementById('losses').innerHTML= 'Losses:' + lossCt;
+   document.getElementById('message').innerHTML='You won!';}
+
 else {
+   lossCt++;
+    document.getElementById('losses').innerHTML= 'Losses:' + lossCt;
+    document.getElementById('wins').innerHTML= 'Wins:' + winsCt;
     document.getElementById('message').innerHTML=ranLoss;
 }
 console.log(msg);
