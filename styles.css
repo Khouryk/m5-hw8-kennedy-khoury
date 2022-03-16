@@ -58,6 +58,14 @@ header{
 
 .score{
   color: #6003C3;
-  font-size: 2rem;
   text-align: center;
+  margin: 50px;
+  font-size: 2rem;
+
 }
+
+.score #wins, #losses{
+  display:inline-block;
+  padding-left: 20px;
+}
+
