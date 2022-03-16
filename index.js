@@ -27,19 +27,6 @@ console.log(box2);
 let box3= parseInt(document.getElementById("box-3").textContent);
 console.log(box3);
 
-//[box1, box2, box3].for(function(i){
-//  i.addEventListener( 'click', function(){
-// console.log(i);
-
-
-let boxs = document.querySelectorAll('.box');
-
-var boxClick= parseInt(boxs.forEach(function(i){
-  i.addEventListener('click', function(){
-  console.log(i.innerHTML);
- });
-
-})).textContent;
 
 // within each click event...
 // determine which box was clicked with 'this.textContent' or event.target.textContent
@@ -48,32 +35,28 @@ var boxClick= parseInt(boxs.forEach(function(i){
 // create a random number between 1-3 and store it to a variable
 // This number will represent the winning box
 
+let boxs = document.querySelectorAll('.box');
 
-
-// TESTING HANDLECLICK to help target clicked boxes??//
-
-
-//const randomNumber = Math.floor(Math.random()*3)+1;
-//console.log(randomNumber);
-
-
-
+boxs.forEach(function(box) {
+   box.addEventListener('click', function(e) {
+       console.log(e.target.textContent);
+       var randomNumber = Math.floor(Math.random()*3)+1;
+         console.log(randomNumber)
+      
 // determine if the box clicked is equal to the random number
 // if the numbers match, display a winning message by changing the text content of the div#message element
 // if the numbers match, increment wins and display the win count in div#wins
 
 
-var randomNumber = Math.floor(Math.random()*3)+1;
-  console.log(randomNumber);
+// if the numbers don't match, change the div#message element's text to a random losing message from the array above
+// if the numbers don't match, increment losses and display the loss count in div#losses
 
-//problem: runs as soon as page opens rather tahn after click, doesn't seem to be reading code, immediatly says failure msg
-
-
-if (boxClick ==randomNumber){
+if (box1, box2, box3 === randomNumber){
    winsCt++;
    document.getElementById('wins').innerHTML= 'Wins:' + winsCt;
    document.getElementById('losses').innerHTML= 'Losses:' + lossCt;
-   document.getElementById('message').innerHTML='You won!';}
+   document.getElementById('message').innerHTML='You won!';
+}
 
 else {
    lossCt++;
@@ -82,7 +65,7 @@ else {
     document.getElementById('message').innerHTML=ranLoss;
 }
 console.log(msg);
+   })
+})
 
-// if the numbers don't match, change the div#message element's text to a random losing message from the array above
-// if the numbers don't match, increment losses and display the loss count in div#losses
 
